@@ -1,31 +1,61 @@
-import { component$ } from '@builder.io/qwik';
-import { QwikLogo } from '../icons/qwik';
-import styles from './header.module.css';
+import { component$, useSignal, useStore, $ } from "@builder.io/qwik";
+import { QwikLogo } from "../icons/qwik";
+import styles from "./header.module.css";
+import { Link, routeLoader$, useLocation } from "@builder.io/qwik-city";
+
+export const useProductDetails = routeLoader$(async (requestEvent) => {
+  // This code runs only on the server, after every navigation
+  const res = await fetch(
+    `https://data.police.uk/api/crimes-street/all-crime?lat=52.629729&lng=-1.131592&date=2017-01`
+  );
+  const product = await res.json();
+  return requestEvent.params;
+});
 
 export default component$(() => {
+  const data = useSignal("http://localhost:5173/");
+
+  const changeData = $(function () {
+    if (window) {
+      data.value = window.location.href;
+    }
+    data.value.split("/").length;
+  });
+
   return (
     <header class={styles.header}>
-      <div class={['container', styles.wrapper]}>
+      <div class={["container", styles.wrapper]}>
         <div class={styles.logo}>
           <a href="/" title="qwik">
-            <QwikLogo height={50} width={143} />
+            <img src="/logos/logo.png" alt="" height={80} />
+
+            <span>Techuar</span>
           </a>
         </div>
         <ul>
-          <li>
-            <a href="https://qwik.builder.io/docs/components/overview/" target="_blank">
-              Docs
-            </a>
+          <li onClick$={changeData}>
+            <Link
+              class={data.value.split("/").length === 4 ? styles.active : ""}
+              href="/"
+            >
+              Home
+            </Link>
           </li>
-          <li>
-            <a href="https://qwik.builder.io/examples/introduction/hello-world/" target="_blank">
-              Examples
-            </a>
+          <li onClick$={changeData}>
+            <Link
+              class={data.value.includes("news") ? styles.active : ""}
+              href="/news"
+            >
+              News
+            </Link>
           </li>
-          <li>
-            <a href="https://qwik.builder.io/tutorial/welcome/overview/" target="_blank">
-              Tutorials
-            </a>
+          <li onClick$={changeData}>
+            <Link
+              class={data.value.includes("build") ? styles.active : ""}
+              href="/build"
+            >
+              Build
+            </Link>
           </li>
         </ul>
       </div>

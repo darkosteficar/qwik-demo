@@ -1,0 +1,124 @@
+.news {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+
+  &__filters {
+    &__categories {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      background-color: var(--secondary);
+      border-radius: 2px;
+      padding: 20px;
+      border: 2px solid var(--secondary-green);
+
+      button {
+        background-color: var(--secondary);
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        transition: 1s all;
+        font-weight: 500;
+
+        &:hover {
+          color: var(--secondary);
+          background-color: var(--secondary-green);
+        }
+
+        &.active {
+          background-color: var(--secondary-green);
+        }
+      }
+
+      h2 {
+        color: white;
+        padding: 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 2px;
+      }
+    }
+  }
+
+  &__list {
+    align-items: flex-start;
+    gap: 10px;
+
+    &__item {
+      overflow: hidden;
+      position: relative;
+      background-color: #00011953;
+      border: 2px solid transparent;
+      transition: 1s all;
+
+      .overlay {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-color: #00011976;
+        transition: 1s all;
+      }
+
+      &:hover {
+        border-color: var(--secondary-green);
+        .overlay {
+          background-color: #00011912;
+        }
+      }
+
+      &__info {
+        position: absolute;
+        display: inline-block;
+        padding: 10px;
+        width: 100%;
+        bottom: 0;
+        background-color: #000119;
+        color: var(--secondary-green);
+      }
+
+      &__date {
+        margin-bottom: 5px;
+        color: white;
+        font-weight: 300;
+        font-size: 0.8rem;
+      }
+      &__title {
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.empty-news-title {
+  font-size: 25px;
+  text-align: center;
+  color: white;
+  margin: 20px;
+  line-height: 1.3;
+  letter-spacing: 1px;
+}
+
+.categories-size-list {
+  margin: 20px;
+  &__item {
+    margin: 10px auto;
+    color: white;
+    background-color: var(--secondary-green);
+    font-size: 20px;
+    padding: 10px 0 10px 0;
+    max-width: 350px;
+    border: 1px solid white;
+    border-radius: 5px;
+  }
+}
+
+.category-tag {
+  background-color: #000119;
+  color: var(--secondary-green);
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  font-weight: 600;
+  padding: 10px 20px;
+}

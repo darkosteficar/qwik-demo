@@ -1,4 +1,12 @@
 /**
+ * Tailwind CSS imports
+ * View the full documentation at https://tailwindcss.com
+ */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
  * WHAT IS THIS FILE?
  *
  * Globally applied styles. No matter which components are in the page or matching route,
@@ -14,6 +22,10 @@
   --qwik-dirty-black: #1d2033;
   --qwik-dark-background: #151934;
   --qwik-dark-text: #ffffff;
+  --main-green: #03b93c;
+  --secondary-green: #00a47c;
+  --secondary: #000119;
+  --secondary-t-50: #00011984;
 }
 
 html {
@@ -22,15 +34,18 @@ html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
   padding: 0;
   margin: 0;
   line-height: inherit;
+}
+
+h1 {
 }
 
 /**
@@ -45,12 +60,42 @@ html {
   -moz-tab-size: 4;
   -o-tab-size: 4;
   tab-size: 4;
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 body {
   padding: 0;
   line-height: inherit;
+}
+
+.btn-main {
+  background-color: var(--secondary-green);
+  color: white;
+  padding: 15px 20px;
+  border-bottom: 3px solid white;
+  font-weight: 600;
+  border-radius: 8px;
+  display: inline-block;
+  transition: all 1s;
+}
+
+.btn-main:hover {
+  color: var(--secondary-green);
+  background-color: white;
+  padding: 15px 20px;
+  border-bottom: 3px solid var(--secondary-green);
+  font-weight: 600;
+  border-radius: 8px;
+  transform: translateY(-3px);
+  display: inline-block;
+}
+
+.mt-6 {
+  margin-top: 1rem;
+}
+
+.mt-12 {
+  margin-top: 2rem;
 }
