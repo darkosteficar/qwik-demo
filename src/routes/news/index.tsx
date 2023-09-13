@@ -2,16 +2,10 @@ import {
   component$,
   useComputed$,
   useSignal,
-  useStore,
   useStylesScoped$,
   $,
 } from "@builder.io/qwik";
-import {
-  DocumentHead,
-  Link,
-  routeLoader$,
-  useLocation,
-} from "@builder.io/qwik-city";
+import { DocumentHead, Link, routeLoader$ } from "@builder.io/qwik-city";
 
 import Counter from "~/components/starter/counter/counter";
 import Hero from "~/components/starter/hero/hero";
@@ -29,7 +23,7 @@ export const fetchNews = routeLoader$(async () => {
 export default component$(() => {
   const news = fetchNews();
   const activeCategory = useSignal("");
-  const filterCategory = $((category) => {
+  const filterCategory = $((category: any) => {
     activeCategory.value = category;
   });
 
@@ -38,14 +32,14 @@ export default component$(() => {
       return news.value.news;
     } else {
       return news.value.news.filter(
-        (article) => article.category === activeCategory.value
+        (article: "GPU" | "CPU") => article.category === activeCategory.value
       );
     }
   });
 
   const newsCategoryCount = useComputed$(() => {
     const categories = { GPU: 0, CPU: 0, Storage: 0, Other: 0 };
-    news.value.news.forEach((article) => {
+    news.value.news.forEach((article: any) => {
       categories[article.category] += 1;
     });
     console.log(Object.entries(categories));
@@ -125,7 +119,7 @@ export default component$(() => {
               Unfortunately, there are no news in this category <br />
               Here are the categories which have news in them:
               <ul class="categories-size-list">
-                {newsCategoryCount.value.map((article, index) => {
+                {newsCategoryCount.value.map((article: any, index: number) => {
                   if (article[1] > 0) {
                     return (
                       <li class="categories-size-list__item">

@@ -13,7 +13,7 @@ export default component$(() => {
     <div class="features_container">
       <h2>Key Components</h2>
       <div class="features">
-        <div class="features_wrapper">
+        <div class="features__wrapper">
           <div class="features_1 features__item">
             <div class="features__title">
               <svg
@@ -74,22 +74,20 @@ export default component$(() => {
                 version="1.1"
                 id="Layer_1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
                 x="0px"
                 y="0px"
                 viewBox="0 0 48 48"
                 style="enable-background:new 0 0 48 48;"
-                xml:space="preserve"
               >
                 <path
                   d="M10,25c-1.654,0-3,1.346-3,3s1.346,3,3,3s3-1.346,3-3S11.654,25,10,25z M10,29c-0.551,0-1-0.449-1-1s0.449-1,1-1
-	s1,0.449,1,1S10.551,29,10,29z M6,20h8c0.552,0,1-0.448,1-1v-4c0-0.552-0.448-1-1-1H6c-0.552,0-1,0.448-1,1v4
-	C5,19.552,5.448,20,6,20z M7,16h6v2H7V16z M24,20h18c0.552,0,1-0.448,1-1v-4c0-0.552-0.448-1-1-1H24c-0.552,0-1,0.448-1,1v4
-	C23,19.552,23.448,20,24,20z M37,16h4v2h-4V16z M31,16h4v2h-4V16z M25,16h4v2h-4V16z M46,10H2c-0.552,0-1,0.448-1,1v26
-	c0,0.552,0.448,1,1,1h44c0.552,0,1-0.448,1-1V11C47,10.448,46.552,10,46,10z M45,36H3V12h42V36z M24,34h18c0.552,0,1-0.448,1-1v-4
-	c0-0.552-0.448-1-1-1H24c-0.552,0-1,0.448-1,1v4C23,33.552,23.448,34,24,34z M37,30h4v2h-4V30z M31,30h4v2h-4V30z M25,30h4v2h-4V30z
-	 M24,27h18c0.552,0,1-0.448,1-1v-4c0-0.552-0.448-1-1-1H24c-0.552,0-1,0.448-1,1v4C23,26.552,23.448,27,24,27z M37,23h4v2h-4V23z
-	 M31,23h4v2h-4V23z M25,23h4v2h-4V23z"
+                    s1,0.449,1,1S10.551,29,10,29z M6,20h8c0.552,0,1-0.448,1-1v-4c0-0.552-0.448-1-1-1H6c-0.552,0-1,0.448-1,1v4
+                    C5,19.552,5.448,20,6,20z M7,16h6v2H7V16z M24,20h18c0.552,0,1-0.448,1-1v-4c0-0.552-0.448-1-1-1H24c-0.552,0-1,0.448-1,1v4
+                    C23,19.552,23.448,20,24,20z M37,16h4v2h-4V16z M31,16h4v2h-4V16z M25,16h4v2h-4V16z M46,10H2c-0.552,0-1,0.448-1,1v26
+                    c0,0.552,0.448,1,1,1h44c0.552,0,1-0.448,1-1V11C47,10.448,46.552,10,46,10z M45,36H3V12h42V36z M24,34h18c0.552,0,1-0.448,1-1v-4
+                    c0-0.552-0.448-1-1-1H24c-0.552,0-1,0.448-1,1v4C23,33.552,23.448,34,24,34z M37,30h4v2h-4V30z M31,30h4v2h-4V30z M25,30h4v2h-4V30z
+                    M24,27h18c0.552,0,1-0.448,1-1v-4c0-0.552-0.448-1-1-1H24c-0.552,0-1,0.448-1,1v4C23,26.552,23.448,27,24,27z M37,23h4v2h-4V23z
+	                M31,23h4v2h-4V23z M25,23h4v2h-4V23z"
                   id="id_101"
                   style="fill: rgb(255, 255, 255);"
                 ></path>
@@ -327,13 +325,11 @@ export default component$(() => {
             <div class="features__title">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                xml:space="preserve"
                 width="1.70666in"
                 height="1.70666in"
                 version="1.1"
                 style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
                 viewBox="0 0 1707 1707"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
               >
                 <defs></defs>
                 <g id="Layer_x0020_1">

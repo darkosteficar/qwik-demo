@@ -26,11 +26,11 @@ export default component$(() => {
     <header class={styles.header}>
       <div class={["container", styles.wrapper]}>
         <div class={styles.logo}>
-          <a href="/" title="qwik">
+          <Link href="/" title="qwik">
             <img src="/logos/logo.png" alt="" height={80} />
 
             <span>Techuar</span>
-          </a>
+          </Link>
         </div>
         <ul>
           <li onClick$={changeData}>
